@@ -14,13 +14,13 @@ $$k(x, y) = \sum_n \lambda_n \phi_n(x)\,\phi_n(y)$$
 
 > *Gaussian Process 를 **사용하는 것** 과, GP posterior mean 이 Kernel Ridge Regression 과 **완전히 동치** 이고 예측 분산이*
 >
-> $$k(x_*, x_*) - k_*^\top (K + \sigma^2 I)^{-1} k_*$$
+> $$k(x_\star, x_\star) - k_\star^\top (K + \sigma^2 I)^{-1} k_\star$$
 >
 > *로 shrink 하는 메커니즘을 유도할 수 있는 것은 다르다.*
 >
 > *MMD 를 **정의하는 것** 과, characteristic kernel 하에서*
 >
-> $$\text{MMD}(p, q) = 0 \;\iff\; p = q$$
+> $$\mathrm{MMD}(p, q) = 0 \quad \Longleftrightarrow \quad p = q$$
 >
 > *이고 이것이 MMD-GAN 의 이론적 근거임을 증명할 수 있는 것은 다르다.*
 
