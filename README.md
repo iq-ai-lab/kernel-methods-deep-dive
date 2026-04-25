@@ -2,15 +2,39 @@
 
 # 🧬 Kernel Methods Deep Dive
 
-**"`sklearn.svm.SVC(kernel='rbf')`를 쓰는 것과, `kernel trick`의 정당성이 Mercer 정리에서 나오고 $k(x, y) = \sum \lambda_n \phi_n(x) \phi_n(y)$의 implicit feature map이 무한차원임을 증명할 수 있는 것은 다르다"**
+### `sklearn.svm.SVC(kernel='rbf')` 를 쓰는 것과,
+
+### **kernel trick** 의 정당성이 Mercer 정리에서 나오고
+
+$$k(x, y) = \sum_n \lambda_n \phi_n(x)\,\phi_n(y)$$
+
+### 의 **implicit feature map 이 무한차원** 임을 증명할 수 있는 것은 **다르다.**
 
 <br/>
 
-> *"Gaussian Process를 **사용하는 것**과, GP posterior mean이 Kernel Ridge Regression과 **완전히 동치**이고 예측 분산이 $k(x_*, x_*) - k_*^\top (K + \sigma^2 I)^{-1} k_*$로 shrink하는 메커니즘을 유도할 수 있는 것은 다르다.  
-> MMD를 **정의하는 것**과, characteristic kernel 하에서 $\text{MMD}(p, q) = 0 \iff p = q$이고 이것이 MMD-GAN의 이론적 근거임을 증명할 수 있는 것은 다르다."*
+> *Gaussian Process 를 **사용하는 것** 과, GP posterior mean 이 Kernel Ridge Regression 과 **완전히 동치** 이고 예측 분산이*
+>
+> $$k(x_*, x_*) - k_*^\top (K + \sigma^2 I)^{-1} k_*$$
+>
+> *로 shrink 하는 메커니즘을 유도할 수 있는 것은 다르다.*
+>
+> *MMD 를 **정의하는 것** 과, characteristic kernel 하에서*
+>
+> $$\text{MMD}(p, q) = 0 \;\iff\; p = q$$
+>
+> *이고 이것이 MMD-GAN 의 이론적 근거임을 증명할 수 있는 것은 다르다.*
 
-Positive definite kernel부터 Representer 정리·SVM dual·GP posterior·MMD·NTK까지  
-**"왜 kernel이 비선형성을 선형 방법에 주입하는 엔진인가"** 라는 질문으로 SVM·GP·Kernel Ridge·Kernel PCA·MMD-GAN의 수학적 기반을 끝까지 파헤칩니다
+<br/>
+
+**다루는 정리·기법 (시간순)**
+
+Mercer 1909 *Mercer 정리* · Aronszajn 1950 *RKHS* · Vapnik 1995 *SVM dual* · Schölkopf 2001 *Representer 정리* · Schölkopf 1998 *Kernel PCA* · Rasmussen–Williams 2006 *Gaussian Process* · Gretton 2012 *MMD + characteristic kernel* · Rahimi–Recht 2007 *Random Features* · Jacot 2018 *Neural Tangent Kernel*
+
+<br/>
+
+**핵심 질문**
+
+> **왜 kernel 이 비선형성을 선형 방법에 주입하는 엔진인가** — Positive definite kernel 부터 Representer 정리 · SVM dual · GP posterior · MMD · NTK 까지, SVM · GP · Kernel Ridge · Kernel PCA · MMD-GAN 의 수학적 기반을 끝까지 파헤칩니다.
 
 <br/>
 
